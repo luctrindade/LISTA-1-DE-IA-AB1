@@ -17,7 +17,7 @@ df['Attrition'] = df['Attrition'].map({'Yes': 1, 'No': 0})
 # separação variáveis preditoras da variável alvo
 colunas_inuteis = ['EmployeeCount', 'EmployeeNumber', 'Over18', 'StandardHours']
 X = df.drop(columns=['Attrition'] + [col for col in colunas_inuteis if col in df.columns])
-y = df['Attrition']
+y = df['Attrition'] 
 
 X = pd.get_dummies(X, drop_first=True)
 

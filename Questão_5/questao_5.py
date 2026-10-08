@@ -11,7 +11,8 @@ SHELL DE SISTEMA BASEADO EM CONHECIMENTO
                         + explicação: POR QUÊ?, COMO?, trilha de inferência
   4. Interface        : diálogo (comandos + frases simples em português)
 
-Uso:  python sbc_shell.py animais.json
+Uso:  python questao_5.py animal.json (exemplo)
+ou python questao_5.py (base vazia)
 """
 import json, re, unicodedata
 from dataclasses import dataclass, field
@@ -518,7 +519,7 @@ class Interface:
         return True
 
     def run(self):
-        print("=== SHELL GENÉRICO DE SBC === ('ajuda' lista os comandos)")
+        print("=== SHELL DE SBC === ('ajuda' lista os comandos)")
         while True:
             try:
                 if not self.comando(input("\nsbc> ")):
