@@ -1,0 +1,30 @@
+{
+  "nome": "Classificação de animais",
+  "perguntas": {
+    "tem_pelos": "O animal tem pelos?", "da_leite": "O animal dá leite?",
+    "tem_penas": "O animal tem penas?", "voa": "O animal voa?", "bota_ovos": "O animal bota ovos?",
+    "come_carne": "O animal come carne?", "dentes_pontudos": "O animal tem dentes pontudos?",
+    "tem_garras": "O animal tem garras?", "olhos_frontais": "O animal tem olhos voltados para frente?",
+    "tem_casco": "O animal tem casco?", "manchas_escuras": "O animal tem manchas escuras?",
+    "listras_escuras": "O animal tem listras escuras?", "pescoco_longo": "O animal tem pescoço longo?",
+    "pernas_longas": "O animal tem pernas longas?", "nada": "O animal nada?",
+    "preto_e_branco": "O animal é preto e branco?", "cor_pelagem": "Qual a cor predominante da pelagem?"
+  },
+  "fatos": {},
+  "regras": [
+    "R1: SE tem_pelos ENTAO classe = mamífero",
+    "R2: SE da_leite ENTAO classe = mamífero",
+    "R3: SE tem_penas ENTAO classe = ave",
+    "R4: SE voa E bota_ovos ENTAO classe = ave",
+    "R5: SE classe = mamífero E come_carne ENTAO ordem = carnívoro",
+    "R6: SE classe = mamífero E dentes_pontudos E tem_garras E olhos_frontais ENTAO ordem = carnívoro",
+    "R7: SE classe = mamífero E tem_casco ENTAO ordem = ungulado",
+    "R8: SE ordem = carnívoro E cor_pelagem = amarelado E manchas_escuras ENTAO animal = chita",
+    "R9: SE ordem = carnívoro E cor_pelagem = amarelado E listras_escuras ENTAO animal = tigre",
+    "R10: SE ordem = ungulado E pernas_longas E pescoco_longo E manchas_escuras ENTAO animal = girafa",
+    "R11: SE ordem = ungulado E listras_escuras ENTAO animal = zebra",
+    "R12: SE classe = ave E NAO voa E pescoco_longo E pernas_longas E preto_e_branco ENTAO animal = avestruz",
+    "R13: SE classe = ave E NAO voa E nada E preto_e_branco ENTAO animal = pinguim",
+    "R14: SE classe = ave E voa ENTAO animal = albatroz"
+  ]
+}
