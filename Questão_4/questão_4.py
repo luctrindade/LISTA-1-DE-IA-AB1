@@ -3,13 +3,13 @@ import os
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 import wittgenstein as lw # Biblioteca para o RIPPER
-import kagglehub
+#import kagglehub
 
 
-path = kagglehub.dataset_download("pavansubhasht/ibm-hr-analytics-attrition-dataset")
-csv_file = [os.path.join(path, f) for f in os.listdir(path) if f.endswith('.csv')][0]
-df = pd.read_csv(csv_file)
-
+#path = kagglehub.dataset_download("pavansubhasht/ibm-hr-analytics-attrition-dataset")
+#csv_file = [os.path.join(path, f) for f in os.listdir(path) if f.endswith('.csv')][0]
+#df = pd.read_csv(csv_file)
+df = pd.read_csv("WA_Fn-UseC_-HR-Employee-Attrition.csv")
 df['Attrition'] = df['Attrition'].map({'Yes': 1, 'No': 0})
 
 colunas_inuteis = ['EmployeeCount', 'EmployeeNumber', 'Over18', 'StandardHours']
